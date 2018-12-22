@@ -1,0 +1,11 @@
+framework module Plug {
+  umbrella header "Plug.h"
+
+  export *
+  module * { export * }
+}
+
+module Plug.Swift {
+    header "Plug-Swift.h"
+    requires objc
+}

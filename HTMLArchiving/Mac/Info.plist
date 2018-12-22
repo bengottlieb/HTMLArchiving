@@ -24,5 +24,13 @@
 	<string>Copyright © 2015 Stand Alone, inc. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
+	<key>branch</key>
+	<string>master</string>
+	<key>built</key>
+	<string>Fri Dec 21 20:58:02 20181221205802</string>
+	<key>git_number</key>
+	<string>2</string>
+	<key>rev</key>
+	<string>06bc212</string>
 </dict>
 </plist>

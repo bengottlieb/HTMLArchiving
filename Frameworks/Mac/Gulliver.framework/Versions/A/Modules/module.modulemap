@@ -1,0 +1,4 @@
+framework module Gulliver {
+    header "Gulliver-Swift.h"
+    requires objc
+}
