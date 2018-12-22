@@ -115,7 +115,7 @@ extension HTMLArchiver {
 			return nil
 		}
 		
-		var mimeType: String = "data/data"
+		public var mimeType: String = "data/data"
 		var response: URLResponse?
 		
 		init?(thumbnailURL: URL, mainFrame: WebFrame, isPrimary: Bool) {
@@ -375,7 +375,7 @@ extension HTTPURLResponse {
 		var url: String = "" { didSet {
 			self.objects[3] = self.url
 		}}
-		var mimeType: String
+		public var mimeType: String
 		
 		func starterData() throws -> Data {
 			guard let url = Bundle(for: HTMLArchiver.self).url(forResource: "archived_response", withExtension: "dat") else { throw Error.sourceDataNotFound}

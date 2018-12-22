@@ -20,12 +20,12 @@ public struct HTMLArchive: Equatable {
 	public var text: String?
 	public var title: String = NSLocalizedString("Untitled", comment: "Untitled")
 	var plist: [String: Any]?
-	var isEmpty: Bool {
+	public var isEmpty: Bool {
 		guard let data = self.data else { return true }
 		return data.count < 10
 	}
 	
-	static let mimeType = "application/x-webarchive"
+	public static let mimeType = "application/x-webarchive"
 	
 	public init?(file: FilePath?) {
 		self.init(data: file?.data ?? Data())

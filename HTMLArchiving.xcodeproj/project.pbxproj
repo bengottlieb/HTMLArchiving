@@ -144,6 +144,8 @@
 		B5088C0221CDE1FF00A1446C /* Plug.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAD21CDDDC700A1446C /* Plug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5088C0321CDE1FF00A1446C /* CrossPlatformKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAE21CDDDC800A1446C /* CrossPlatformKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5088C0421CDE1FF00A1446C /* Gulliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAF21CDDDC800A1446C /* Gulliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B53BACCE21CEDDCB00176B16 /* MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BACCD21CEDDCB00176B16 /* MacTests.swift */; };
+		B53BACD821CEE27000176B16 /* parsertest.html in Resources */ = {isa = PBXBuildFile; fileRef = B53BACD721CEE27000176B16 /* parsertest.html */; };
 		B58D64791A898F89005A0002 /* HTMLArchiving.h in Headers */ = {isa = PBXBuildFile; fileRef = B58D64681A898F81005A0002 /* HTMLArchiving.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B58D64961A899285005A0002 /* HTMLArchiving.h in Headers */ = {isa = PBXBuildFile; fileRef = B58D646B1A898F81005A0002 /* HTMLArchiving.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -155,6 +157,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B504E6AE1A898110001B414B;
 			remoteInfo = HTMLArchiving_Mac;
+		};
+		B53BACD021CEDDCB00176B16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B504E60B1A89230F001B414B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5088BEA21CDE14F00A1446C;
+			remoteInfo = TestHarness_Mac;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -269,6 +278,10 @@
 		B5088BF221CDE15000A1446C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B5088BF421CDE15000A1446C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5088BF521CDE15000A1446C /* TestHarness_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestHarness_Mac.entitlements; sourceTree = "<group>"; };
+		B53BACCB21CEDDCB00176B16 /* MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B53BACCD21CEDDCB00176B16 /* MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacTests.swift; sourceTree = "<group>"; };
+		B53BACCF21CEDDCB00176B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B53BACD721CEE27000176B16 /* parsertest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = parsertest.html; sourceTree = "<group>"; };
 		B58D64671A898F81005A0002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B58D64681A898F81005A0002 /* HTMLArchiving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMLArchiving.h; sourceTree = "<group>"; };
 		B58D646A1A898F81005A0002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -306,6 +319,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B53BACC821CEDDCB00176B16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -314,6 +334,7 @@
 			children = (
 				B504E66A1A896980001B414B /* BuildFramework.sh */,
 				B5088BEC21CDE14F00A1446C /* TestHarness_Mac */,
+				B53BACCC21CEDDCB00176B16 /* MacTests */,
 				B5088BA721CDDDC700A1446C /* Frameworks */,
 				B5088B5221CDC36200A1446C /* Framework Code */,
 				B5088AC421CDC17F00A1446C /* ParseHTML */,
@@ -330,6 +351,7 @@
 				B504E6461A8968DC001B414B /* HTMLArchiving.framework */,
 				B504E6AF1A898110001B414B /* HTMLArchiving.framework */,
 				B5088BEB21CDE14F00A1446C /* TestHarness_Mac.app */,
+				B53BACCB21CEDDCB00176B16 /* MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -469,6 +491,16 @@
 				B5088BA521CDDCF200A1446C /* String+Extensions.swift */,
 			);
 			path = HTMLArchiver;
+			sourceTree = "<group>";
+		};
+		B53BACCC21CEDDCB00176B16 /* MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				B53BACCD21CEDDCB00176B16 /* MacTests.swift */,
+				B53BACD721CEE27000176B16 /* parsertest.html */,
+				B53BACCF21CEDDCB00176B16 /* Info.plist */,
+			);
+			path = MacTests;
 			sourceTree = "<group>";
 		};
 		B58D64661A898F81005A0002 /* HTMLArchiving_Mac */ = {
@@ -626,6 +658,24 @@
 			productReference = B5088BEB21CDE14F00A1446C /* TestHarness_Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B53BACCA21CEDDCB00176B16 /* MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B53BACD221CEDDCB00176B16 /* Build configuration list for PBXNativeTarget "MacTests" */;
+			buildPhases = (
+				B53BACC721CEDDCB00176B16 /* Sources */,
+				B53BACC821CEDDCB00176B16 /* Frameworks */,
+				B53BACC921CEDDCB00176B16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B53BACD121CEDDCB00176B16 /* PBXTargetDependency */,
+			);
+			name = MacTests;
+			productName = MacTests;
+			productReference = B53BACCB21CEDDCB00176B16 /* MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -658,6 +708,12 @@
 							};
 						};
 					};
+					B53BACCA21CEDDCB00176B16 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = YY6CWUX533;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B5088BEA21CDE14F00A1446C;
+					};
 				};
 			};
 			buildConfigurationList = B504E60E1A89230F001B414B /* Build configuration list for PBXProject "HTMLArchiving" */;
@@ -677,6 +733,7 @@
 				B504E6AE1A898110001B414B /* HTMLArchiving_Mac */,
 				B504E6661A89690C001B414B /* Combined Framework */,
 				B5088BEA21CDE14F00A1446C /* TestHarness_Mac */,
+				B53BACCA21CEDDCB00176B16 /* MacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -704,6 +761,14 @@
 			files = (
 				B5088BF021CDE15000A1446C /* Assets.xcassets in Resources */,
 				B5088BF321CDE15000A1446C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B53BACC921CEDDCB00176B16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B53BACD821CEE27000176B16 /* parsertest.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +870,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B53BACC721CEDDCB00176B16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B53BACCE21CEDDCB00176B16 /* MacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -812,6 +885,11 @@
 			isa = PBXTargetDependency;
 			target = B504E6AE1A898110001B414B /* HTMLArchiving_Mac */;
 			targetProxy = B5088BF921CDE15B00A1446C /* PBXContainerItemProxy */;
+		};
+		B53BACD121CEDDCB00176B16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5088BEA21CDE14F00A1446C /* TestHarness_Mac */;
+			targetProxy = B53BACD021CEDDCB00176B16 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -876,7 +954,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -927,7 +1005,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1141,6 +1219,65 @@
 			};
 			name = Release;
 		};
+		B53BACD321CEDDCB00176B16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YY6CWUX533;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.standalone.MacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestHarness_Mac.app/Contents/MacOS/TestHarness_Mac";
+			};
+			name = Debug;
+		};
+		B53BACD421CEDDCB00176B16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YY6CWUX533;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.standalone.MacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestHarness_Mac.app/Contents/MacOS/TestHarness_Mac";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1185,6 +1322,15 @@
 			buildConfigurations = (
 				B5088BF721CDE15000A1446C /* Debug */,
 				B5088BF821CDE15000A1446C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B53BACD221CEDDCB00176B16 /* Build configuration list for PBXNativeTarget "MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B53BACD321CEDDCB00176B16 /* Debug */,
+				B53BACD421CEDDCB00176B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

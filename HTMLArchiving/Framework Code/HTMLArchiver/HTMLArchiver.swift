@@ -18,10 +18,10 @@ open class HTMLArchiver {
 	enum ArchiveError: Error { case cancelled, failedToGetHTML }
 	enum State { case idle, waitingForHTML, starting, loadingHTML, parsing, loadingResources, complete }
 	
-	var bundle: BundledPageData!
+	public var bundle: BundledPageData!
 	var html: String?
 	var data: Data?
-	let url: URL
+	public let url: URL
 	var state = State.idle
 	var text: String?
 	var tempDirectory: URL!
@@ -73,6 +73,8 @@ open class HTMLArchiver {
 			self.startDocket.decrement(tag: "stylesheets")
 		}
 		
+		
+		
 //		webView.evaluateJavaScript(WKWebView.findFavIconScript) { results, error in
 //			if let raw = results as? String, let url = raw.url(basedOn: self.url), let mainFrame = self.mainFrame {
 //				mainFrame.queue(resource: Resource(thumbnailURL: url, mainFrame: mainFrame, isPrimary: true))
@@ -84,16 +86,16 @@ open class HTMLArchiver {
 //		}
 	}
 	
+	public convenience init?(info: BundledPageData, progressCallback: HTMLArchiverProgressCallback? = nil) {
+		self.init(url: info.url, html: info.html, progressCallback: progressCallback)
+		self.bundle = info
+	}
+	
 	public init?(url: URL, html: String? = nil, progressCallback: HTMLArchiverProgressCallback? = nil) {
 		self.html = html
 		self.url = url
 		self.progressCallback = progressCallback
 		if !self.setupTempDirectory() { return nil }
-	}
-	
-	public convenience init?(info: BundledPageData, progressCallback: HTMLArchiverProgressCallback? = nil) {
-		self.init(url: info.url, html: info.html, progressCallback: progressCallback)
-		self.bundle = info
 	}
 	
 	func setupTempDirectory() -> Bool {

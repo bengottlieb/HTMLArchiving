@@ -16,7 +16,7 @@ extension WKWebView {
 	}
 	
     #if os(iOS)
-		func setVisiblePercentages(start: Double?, end: Double?) {
+		public func setVisiblePercentages(start: Double?, end: Double?) {
 			let scrollHeight = self.scrollView.contentSize.height
 			let top = self.scrollView.contentOffset.y
 			let isFullPage = (self.bounds.height >= self.scrollView.contentSize.height)
@@ -30,7 +30,7 @@ extension WKWebView {
 			}
 		}
 	
-		func fetchVisiblePercentages(completion: @escaping (Double?, Double?) -> Void) {
+		public func fetchVisiblePercentages(completion: @escaping (Double?, Double?) -> Void) {
 			let scrollHeight = self.scrollView.contentSize.height
 			let start = self.scrollView.contentOffset.y
 			let isFullPage = (self.bounds.height >= self.scrollView.contentSize.height)
@@ -40,7 +40,7 @@ extension WKWebView {
 			}
 		}
 	#else
-		func setVisiblePercentages(start: Double?, end: Double?) {
+		public func setVisiblePercentages(start: Double?, end: Double?) {
 			guard let start = start else { return }
 			let script = """
 				var body = document.body, html = document.documentElement;
@@ -54,7 +54,7 @@ extension WKWebView {
 				
 			}
 		}
-		func fetchVisiblePercentages(completion: @escaping (Double?, Double?) -> Void) {
+		public func fetchVisiblePercentages(completion: @escaping (Double?, Double?) -> Void) {
 			let script = """
 				var body = document.body, html = document.documentElement;
 				var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );

@@ -23,7 +23,7 @@ extension SelfContainedWebViewDelegate {
 public typealias WebLoadCompletionBlock = (Bool) -> Void
 
 @objc open class SelfContainedWKWebView: WKWebView {
-	var pendingScrollPercentage: CGFloat?
+	public var pendingScrollPercentage: CGFloat?
 	var originalURL: URL?
 	
 	public convenience init(defaultFrame: CGRect) {
@@ -51,7 +51,7 @@ public typealias WebLoadCompletionBlock = (Bool) -> Void
 	open override var uiDelegate: WKUIDelegate? { didSet { if self.uiDelegate !== self { self.addUIDelegate(self.uiDelegate); self.uiDelegate = self } }}
 	var completions: [WebLoadCompletionBlock] = []
 	var redirectionOrigin: URL?
-	var isRedirecting: Bool { return self.redirectionOrigin != nil }
+	public var isRedirecting: Bool { return self.redirectionOrigin != nil }
 	
 	var uiDelegates: WeakArray<WKUIDelegate> = []
 	var navigationDelegates: WeakArray<WKNavigationDelegate> = []
@@ -126,7 +126,7 @@ public typealias WebLoadCompletionBlock = (Bool) -> Void
 }
 
 extension SelfContainedWKWebView: WKUIDelegate {
-	public func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+	open func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
 		if navigationAction.targetFrame?.isMainFrame != true {
 			
 			self.load(request: navigationAction.request)
