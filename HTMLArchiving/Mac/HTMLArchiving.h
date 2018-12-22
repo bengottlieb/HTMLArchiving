@@ -16,4 +16,3 @@ FOUNDATION_EXPORT const unsigned char CrossPlatformKit_MacVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <CrossPlatformKit_Mac/PublicHeader.h>
 
-

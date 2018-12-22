@@ -8,7 +8,7 @@
 
 import WebKit
 import Plug
-import ParseHTML
+//import ParseHTML
 import Gulliver
 
 public typealias HTMLArchiverProgressCallback = ((Double) -> Void)
@@ -73,15 +73,15 @@ open class HTMLArchiver {
 			self.startDocket.decrement(tag: "stylesheets")
 		}
 		
-		webView.evaluateJavaScript(WKWebView.findFavIconScript) { results, error in
-			if let raw = results as? String, let url = raw.url(basedOn: self.url), let mainFrame = self.mainFrame {
-				mainFrame.queue(resource: Resource(thumbnailURL: url, mainFrame: mainFrame, isPrimary: true))
-				print("Found touch icon: \(url)")
-			} else {
-				print("No thumbnail found")
-			}
-			self.startDocket.decrement(tag: "touchIcon")
-		}
+//		webView.evaluateJavaScript(WKWebView.findFavIconScript) { results, error in
+//			if let raw = results as? String, let url = raw.url(basedOn: self.url), let mainFrame = self.mainFrame {
+//				mainFrame.queue(resource: Resource(thumbnailURL: url, mainFrame: mainFrame, isPrimary: true))
+//				print("Found touch icon: \(url)")
+//			} else {
+//				print("No thumbnail found")
+//			}
+//			self.startDocket.decrement(tag: "touchIcon")
+//		}
 	}
 	
 	public init?(url: URL, html: String? = nil, progressCallback: HTMLArchiverProgressCallback? = nil) {
