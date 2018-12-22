@@ -405,16 +405,7 @@
 		B5088B5221CDC36200A1446C /* Framework Code */ = {
 			isa = PBXGroup;
 			children = (
-				B5088B5321CDC36200A1446C /* archived_response.dat */,
-				B5088B5421CDC36200A1446C /* HTMLArchivedResource.swift */,
-				B5088B5521CDC36200A1446C /* HTMLArchivedFrame.swift */,
-				B5088B5621CDC36200A1446C /* HTMLArchive.swift */,
-				B5088B5721CDC36200A1446C /* BundledPageData.swift */,
-				B5088B5821CDC36200A1446C /* SelfContainedUIWebView.swift */,
-				B5088B5921CDC36200A1446C /* HTMLArchiver.swift */,
-				B5088B5A21CDC36200A1446C /* WKWebView+Tome.swift */,
-				B5088B5B21CDC36200A1446C /* SelfContainedWKWebView.swift */,
-				B5088BA521CDDCF200A1446C /* String+Extensions.swift */,
+				B5088C0521CDEB3E00A1446C /* HTMLArchiver */,
 			);
 			name = "Framework Code";
 			path = "HTMLArchiving/Framework Code";
@@ -461,6 +452,23 @@
 				B5088BF521CDE15000A1446C /* TestHarness_Mac.entitlements */,
 			);
 			path = TestHarness_Mac;
+			sourceTree = "<group>";
+		};
+		B5088C0521CDEB3E00A1446C /* HTMLArchiver */ = {
+			isa = PBXGroup;
+			children = (
+				B5088B5321CDC36200A1446C /* archived_response.dat */,
+				B5088B5421CDC36200A1446C /* HTMLArchivedResource.swift */,
+				B5088B5521CDC36200A1446C /* HTMLArchivedFrame.swift */,
+				B5088B5621CDC36200A1446C /* HTMLArchive.swift */,
+				B5088B5721CDC36200A1446C /* BundledPageData.swift */,
+				B5088B5821CDC36200A1446C /* SelfContainedUIWebView.swift */,
+				B5088B5921CDC36200A1446C /* HTMLArchiver.swift */,
+				B5088B5A21CDC36200A1446C /* WKWebView+Tome.swift */,
+				B5088B5B21CDC36200A1446C /* SelfContainedWKWebView.swift */,
+				B5088BA521CDDCF200A1446C /* String+Extensions.swift */,
+			);
+			path = HTMLArchiver;
 			sourceTree = "<group>";
 		};
 		B58D64661A898F81005A0002 /* HTMLArchiving_Mac */ = {

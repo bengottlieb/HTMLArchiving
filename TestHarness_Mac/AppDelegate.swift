@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		let archive = HTMLArchiver(url: URL(string: "https://cnn.com")!)?.archive() { archive, error in
+		HTMLArchiver(url: URL(string: "https://cnn.com")!)?.archive() { archive, error in
 			print("Done")
 		}
 	}
