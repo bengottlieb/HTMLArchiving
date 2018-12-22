@@ -27,11 +27,11 @@ public struct HTMLArchive: Equatable {
 	
 	static let mimeType = "application/x-webarchive"
 	
-	init?(file: FilePath?) {
+	public init?(file: FilePath?) {
 		self.init(data: file?.data ?? Data())
 	}
 	
-	init(url: URL, data: Data, meta: [String: String]? = nil, image: UXImage? = nil, text: String? = nil, title: String = NSLocalizedString("Untitled", comment: "Untitled"), thumbnailImage: UXImage? = nil) {
+	public init(url: URL, data: Data, meta: [String: String]? = nil, image: UXImage? = nil, text: String? = nil, title: String = NSLocalizedString("Untitled", comment: "Untitled"), thumbnailImage: UXImage? = nil) {
 		self.url = url
 		self.originalURL = url
 		self.data = data
@@ -42,7 +42,7 @@ public struct HTMLArchive: Equatable {
 		self.thumbnailImage = thumbnailImage
 	}
 
-	init?(data: Data) {
+	public init?(data: Data) {
 		if let dict = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any] {
 			self.plist = dict
 			if let urlString = (dict?["WebMainResource"] as? [String: Any])?["WebResourceURL"] as? String {

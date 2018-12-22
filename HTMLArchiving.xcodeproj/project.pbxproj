@@ -136,9 +136,27 @@
 		B5088BE421CDDEC800A1446C /* CSSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = B5088AF021CDC1B300A1446C /* CSSParser.h */; };
 		B5088BE521CDDEC800A1446C /* CSSTokens.h in Headers */ = {isa = PBXBuildFile; fileRef = B5088AF121CDC1B300A1446C /* CSSTokens.h */; };
 		B5088BE621CDDEC800A1446C /* CSSTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5088AF221CDC1B300A1446C /* CSSTokenizer.m */; };
+		B5088BEE21CDE14F00A1446C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088BED21CDE14F00A1446C /* AppDelegate.swift */; };
+		B5088BF021CDE15000A1446C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5088BEF21CDE15000A1446C /* Assets.xcassets */; };
+		B5088BF321CDE15000A1446C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5088BF121CDE15000A1446C /* MainMenu.xib */; };
+		B5088C0021CDE18400A1446C /* HTMLArchiving.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B504E6AF1A898110001B414B /* HTMLArchiving.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5088C0121CDE1FF00A1446C /* SwearKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BB921CDDEAD00A1446C /* SwearKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5088C0221CDE1FF00A1446C /* Plug.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAD21CDDDC700A1446C /* Plug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5088C0321CDE1FF00A1446C /* CrossPlatformKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAE21CDDDC800A1446C /* CrossPlatformKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5088C0421CDE1FF00A1446C /* Gulliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAF21CDDDC800A1446C /* Gulliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B58D64791A898F89005A0002 /* HTMLArchiving.h in Headers */ = {isa = PBXBuildFile; fileRef = B58D64681A898F81005A0002 /* HTMLArchiving.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B58D64961A899285005A0002 /* HTMLArchiving.h in Headers */ = {isa = PBXBuildFile; fileRef = B58D646B1A898F81005A0002 /* HTMLArchiving.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5088BF921CDE15B00A1446C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B504E60B1A89230F001B414B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B504E6AE1A898110001B414B;
+			remoteInfo = HTMLArchiving_Mac;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B5088B4F21CDC1EC00A1446C /* Embed Frameworks */ = {
@@ -147,6 +165,21 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5088BFB21CDE16300A1446C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5088C0021CDE18400A1446C /* HTMLArchiving.framework in Embed Frameworks */,
+				B5088C0121CDE1FF00A1446C /* SwearKit.framework in Embed Frameworks */,
+				B5088C0221CDE1FF00A1446C /* Plug.framework in Embed Frameworks */,
+				B5088C0321CDE1FF00A1446C /* CrossPlatformKit.framework in Embed Frameworks */,
+				B5088C0421CDE1FF00A1446C /* Gulliver.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,10 +200,6 @@
 		B504E6461A8968DC001B414B /* HTMLArchiving.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLArchiving.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B504E66A1A896980001B414B /* BuildFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = BuildFramework.sh; path = HTMLArchiving/BuildFramework.sh; sourceTree = "<group>"; };
 		B504E6AF1A898110001B414B /* HTMLArchiving.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTMLArchiving.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5088AB121CDC10600A1446C /* ParseHTML_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseHTML_iOS.h; sourceTree = "<group>"; };
-		B5088AB221CDC10600A1446C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5088ABE21CDC14800A1446C /* ParseHTML_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseHTML_mac.h; sourceTree = "<group>"; };
-		B5088ABF21CDC14900A1446C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5088AC621CDC1B200A1446C /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
 		B5088AC721CDC1B200A1446C /* NSString+HTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTMLEntities.h"; sourceTree = "<group>"; };
 		B5088AC821CDC1B200A1446C /* HTMLSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLSerialization.h; sourceTree = "<group>"; };
@@ -234,6 +263,12 @@
 		B5088BAF21CDDDC800A1446C /* Gulliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Gulliver.framework; sourceTree = "<group>"; };
 		B5088BB721CDDEA700A1446C /* SwearKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwearKit.framework; sourceTree = "<group>"; };
 		B5088BB921CDDEAD00A1446C /* SwearKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwearKit.framework; sourceTree = "<group>"; };
+		B5088BEB21CDE14F00A1446C /* TestHarness_Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHarness_Mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5088BED21CDE14F00A1446C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5088BEF21CDE15000A1446C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5088BF221CDE15000A1446C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B5088BF421CDE15000A1446C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5088BF521CDE15000A1446C /* TestHarness_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestHarness_Mac.entitlements; sourceTree = "<group>"; };
 		B58D64671A898F81005A0002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B58D64681A898F81005A0002 /* HTMLArchiving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMLArchiving.h; sourceTree = "<group>"; };
 		B58D646A1A898F81005A0002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -264,6 +299,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5088BE821CDE14F00A1446C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -271,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				B504E66A1A896980001B414B /* BuildFramework.sh */,
+				B5088BEC21CDE14F00A1446C /* TestHarness_Mac */,
 				B5088BA721CDDDC700A1446C /* Frameworks */,
 				B5088B5221CDC36200A1446C /* Framework Code */,
 				B5088AC421CDC17F00A1446C /* ParseHTML */,
@@ -286,26 +329,9 @@
 			children = (
 				B504E6461A8968DC001B414B /* HTMLArchiving.framework */,
 				B504E6AF1A898110001B414B /* HTMLArchiving.framework */,
+				B5088BEB21CDE14F00A1446C /* TestHarness_Mac.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B5088AB021CDC10600A1446C /* ParseHTML_iOS */ = {
-			isa = PBXGroup;
-			children = (
-				B5088AB121CDC10600A1446C /* ParseHTML_iOS.h */,
-				B5088AB221CDC10600A1446C /* Info.plist */,
-			);
-			path = ParseHTML_iOS;
-			sourceTree = "<group>";
-		};
-		B5088ABD21CDC14800A1446C /* ParseHTML_mac */ = {
-			isa = PBXGroup;
-			children = (
-				B5088ABE21CDC14800A1446C /* ParseHTML_mac.h */,
-				B5088ABF21CDC14900A1446C /* Info.plist */,
-			);
-			path = ParseHTML_mac;
 			sourceTree = "<group>";
 		};
 		B5088AC421CDC17F00A1446C /* ParseHTML */ = {
@@ -314,8 +340,6 @@
 				B5088B7821CDD01600A1446C /* module.modulemap */,
 				B5088AC521CDC1B200A1446C /* Code */,
 				B5088AED21CDC1B300A1446C /* CSS */,
-				B5088AB021CDC10600A1446C /* ParseHTML_iOS */,
-				B5088ABD21CDC14800A1446C /* ParseHTML_mac */,
 			);
 			path = ParseHTML;
 			sourceTree = "<group>";
@@ -425,6 +449,18 @@
 				B5088BAF21CDDDC800A1446C /* Gulliver.framework */,
 			);
 			path = Mac;
+			sourceTree = "<group>";
+		};
+		B5088BEC21CDE14F00A1446C /* TestHarness_Mac */ = {
+			isa = PBXGroup;
+			children = (
+				B5088BED21CDE14F00A1446C /* AppDelegate.swift */,
+				B5088BEF21CDE15000A1446C /* Assets.xcassets */,
+				B5088BF121CDE15000A1446C /* MainMenu.xib */,
+				B5088BF421CDE15000A1446C /* Info.plist */,
+				B5088BF521CDE15000A1446C /* TestHarness_Mac.entitlements */,
+			);
+			path = TestHarness_Mac;
 			sourceTree = "<group>";
 		};
 		B58D64661A898F81005A0002 /* HTMLArchiving_Mac */ = {
@@ -563,13 +599,32 @@
 			productReference = B504E6AF1A898110001B414B /* HTMLArchiving.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B5088BEA21CDE14F00A1446C /* TestHarness_Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5088BF621CDE15000A1446C /* Build configuration list for PBXNativeTarget "TestHarness_Mac" */;
+			buildPhases = (
+				B5088BE721CDE14F00A1446C /* Sources */,
+				B5088BE821CDE14F00A1446C /* Frameworks */,
+				B5088BE921CDE14F00A1446C /* Resources */,
+				B5088BFB21CDE16300A1446C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5088BFA21CDE15B00A1446C /* PBXTargetDependency */,
+			);
+			name = TestHarness_Mac;
+			productName = TestHarness_Mac;
+			productReference = B5088BEB21CDE14F00A1446C /* TestHarness_Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B504E60B1A89230F001B414B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Stand Alone, inc.";
 				TargetAttributes = {
@@ -584,6 +639,16 @@
 					B504E6AE1A898110001B414B = {
 						CreatedOnToolsVersion = 6.1.1;
 						LastSwiftMigration = 0930;
+					};
+					B5088BEA21CDE14F00A1446C = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = YY6CWUX533;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -603,6 +668,7 @@
 				B504E6451A8968DC001B414B /* HTMLArchiving_iOS */,
 				B504E6AE1A898110001B414B /* HTMLArchiving_Mac */,
 				B504E6661A89690C001B414B /* Combined Framework */,
+				B5088BEA21CDE14F00A1446C /* TestHarness_Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -621,6 +687,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5088B5D21CDC36300A1446C /* archived_response.dat in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5088BE921CDE14F00A1446C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5088BF021CDE15000A1446C /* Assets.xcassets in Resources */,
+				B5088BF321CDE15000A1446C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,7 +789,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5088BE721CDE14F00A1446C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5088BEE21CDE14F00A1446C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5088BFA21CDE15B00A1446C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B504E6AE1A898110001B414B /* HTMLArchiving_Mac */;
+			targetProxy = B5088BF921CDE15B00A1446C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5088BF121CDE15000A1446C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5088BF221CDE15000A1446C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B504E6301A89230F001B414B /* Debug */ = {
@@ -974,6 +1076,63 @@
 			};
 			name = Release;
 		};
+		B5088BF721CDE15000A1446C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YY6CWUX533;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TestHarness_Mac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.standalone.TestHarness-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		B5088BF821CDE15000A1446C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YY6CWUX533;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TestHarness_Mac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.standalone.TestHarness-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1009,6 +1168,15 @@
 			buildConfigurations = (
 				B504E6C31A898111001B414B /* Debug */,
 				B504E6C41A898111001B414B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5088BF621CDE15000A1446C /* Build configuration list for PBXNativeTarget "TestHarness_Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5088BF721CDE15000A1446C /* Debug */,
+				B5088BF821CDE15000A1446C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
