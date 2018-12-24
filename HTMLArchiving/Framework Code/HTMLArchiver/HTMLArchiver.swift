@@ -41,7 +41,6 @@ open class HTMLArchiver {
 		
 		if webView.url == nil { return nil }
 		if !self.setupTempDirectory() { return nil }
-		self.state = .waitingForHTML
 
 		self.startDocket = Docket("webviewArchiveProgress") {
 			let shouldArchive = self.state == .starting
@@ -50,6 +49,7 @@ open class HTMLArchiver {
 		}
 		
 		if self.fetchHTMLFromWebView {
+			self.state = .waitingForHTML
 			self.startDocket.increment(tag: "html")
 			webView.fetchHTML { html in
 				self.html = html
