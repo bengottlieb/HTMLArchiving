@@ -16,7 +16,7 @@ public typealias ArchiveCompletionClosure = ((HTMLArchive?, Error?) -> Void)
 
 open class HTMLArchiver {
 	enum ArchiveError: Error { case cancelled, failedToGetHTML }
-	enum State { case idle, waitingForHTML, starting, loadingHTML, parsing, loadingResources, complete }
+	enum State { case idle, waitingForHTML, waitingForCookies, starting, loadingHTML, parsing, loadingResources, complete }
 	
 	public var bundle: BundledPageData!
 	var html: String?
@@ -26,10 +26,19 @@ open class HTMLArchiver {
 	var text: String?
 	var tempDirectory: URL!
 	var progressCallback: HTMLArchiverProgressCallback?
-	
+
+	var cookies: [HTTPCookie] = []
 	var mainFrame: WebFrame?
 	var archiveResults: HTMLArchive?
-	var startDocket: Docket!
+	lazy var startDocket: Docket = {
+		let docket = Docket("webviewArchiveProgress-\(self)") {
+			self.state = .idle
+			self.beginArchive()
+		}
+		docket.increment(tag: "begin")
+		return docket
+	}()
+
 	var resourceURLs: [ResourceType: [String]] = [:]
 	let fetchHTMLFromWebView = false		// some sites seem to be having problems if we fetch the webview-preprocessed HTML. We should grab directly from the site when possible
 	
@@ -42,12 +51,6 @@ open class HTMLArchiver {
 		if webView.url == nil { return nil }
 		if !self.setupTempDirectory() { return nil }
 
-		self.startDocket = Docket("webviewArchiveProgress") {
-			let shouldArchive = self.state == .starting
-			self.state = .idle
-			if shouldArchive { self.beginArchive() }
-		}
-		
 		if self.fetchHTMLFromWebView {
 			self.state = .waitingForHTML
 			self.startDocket.increment(tag: "html")
@@ -55,10 +58,19 @@ open class HTMLArchiver {
 				self.html = html
 				self.startDocket.decrement(tag: "html")
 			}
+		} else {
+			if #available(OSXApplicationExtension 10.13, iOS 11, *) {
+				self.state = .waitingForCookies
+				self.startDocket.increment(tag: "cookies")
+				WKWebsiteDataStore.default().httpCookieStore.getAllCookies { cookies in
+					self.cookies = cookies
+					self.startDocket.decrement(tag: "cookies")
+				}
+			}
 		}
 		
 		self.startDocket.increment(tag: "stylesheets")
-		self.startDocket.increment(tag: "touchIcon")
+	//	self.startDocket.increment(tag: "touchIcon")
 
 		webView.evaluateJavaScript("document.body.innerText") { text, error in
 			if let content = text as? String {
@@ -127,14 +139,9 @@ open class HTMLArchiver {
 			completion(results, nil)
 			return
 		}
-		
+
 		self.archiveCompleteBlocks.append(completion)
-		if self.state != .idle {
-			if self.state == .waitingForHTML { self.state = .starting }
-			return
-		}
-		
-		self.beginArchive()
+		self.startDocket.decrement(tag: "begin")
 	}
 	
 	func beginArchive() {
@@ -149,6 +156,7 @@ open class HTMLArchiver {
 			connection.addHeader(header: Plug.Header.accept(["*/*"]))
 			connection.addHeader(header: Plug.Header.acceptEncoding("gzip;q=1.0,compress;q=0.5"))
 
+			connection.setCookies(self.cookies)
 			connection.completion { conn, data in
 				self.data = data.data
 				if let html = data.data.string {
