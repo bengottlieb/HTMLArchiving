@@ -156,7 +156,7 @@ open class HTMLArchiver {
 			connection.addHeader(header: Plug.Header.accept(["*/*"]))
 			connection.addHeader(header: Plug.Header.acceptEncoding("gzip;q=1.0,compress;q=0.5"))
 
-			connection.setCookies(self.cookies)
+			//connection.setCookies(self.cookies)
 			connection.completion { conn, data in
 				self.data = data.data
 				if let html = data.data.string {

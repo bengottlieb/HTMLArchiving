@@ -17,9 +17,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var webview: WKWebView!
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		HTMLArchiver(url: URL(string: "https://cnn.com")!)?.archive() { archive, error in
-			print("Done")
-		}
+//		HTMLArchiver(url: URL(string: "https://cnn.com")!)?.archive() { archive, error in
+//			print("Done")
+//		}
 
 		self.showWindow()
 	}
