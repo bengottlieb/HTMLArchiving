@@ -188,6 +188,7 @@ extension HTMLArchiver {
 		}
 		
 		var hashValue: Int
+		func hash(into hasher: inout Hasher) { hasher.combine(self.hashValue) }
 		var isStyleSheet: Bool { return self.mimeType.lowercased().contains("css") }
 		var isHTML: Bool { return self.mimeType.lowercased().contains("html") }
 		var isIFrame: Bool { return self.type == .frames }

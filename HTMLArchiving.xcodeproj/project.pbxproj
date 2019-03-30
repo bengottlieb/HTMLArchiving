@@ -683,7 +683,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Stand Alone, inc.";
 				TargetAttributes = {
 					B504E6451A8968DC001B414B = {
@@ -718,7 +718,7 @@
 			};
 			buildConfigurationList = B504E60E1A89230F001B414B /* Build configuration list for PBXProject "HTMLArchiving" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -1029,7 +1029,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
-					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
 					"$(PROJECT_DIR)/Frameworks/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1065,7 +1064,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
-					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
 					"$(PROJECT_DIR)/Frameworks/iOS",
 				);
 				INFOPLIST_FILE = HTMLArchiving/iOS/Info.plist;

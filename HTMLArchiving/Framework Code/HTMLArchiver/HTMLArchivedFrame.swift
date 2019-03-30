@@ -18,6 +18,7 @@ extension HTMLArchiver {
 		let url: URL
 		let queue = DispatchQueue(label: "frame_queue", attributes: [])
 		var hashValue: Int { return self.html.hash }
+		func hash(into hasher: inout Hasher) { self.html.hash(into: &hasher) }
 		var readyToExtract = false
 		var resourceURLs: [ResourceType: [String]] = [:]
 		var doc: HTMLDocument?
