@@ -43,21 +43,25 @@ public struct HTMLArchive: Equatable {
 	}
 
 	public init?(data: Data) {
-		if let dict = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any] {
-			self.plist = dict
-			if let urlString = (dict?["WebMainResource"] as? [String: Any])?["WebResourceURL"] as? String {
-				self.url = URL(string: urlString)
+		do {
+			if let dict = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any] {
+				self.plist = dict
+				if let webMain = dict["WebMainResource"] as? [String: Any], let urlString = webMain["WebResourceURL"] as? String {
+					self.url = URL(string: urlString)
+				} else {
+					self.url = nil
+				}
+				self.data = data
 			} else {
+				self.data = data
 				self.url = nil
 			}
-			self.data = data
-		} else {
-			self.data = data
-			self.url = nil
+
+			self.originalURL = url
+			if self.url == nil { return nil }
+		} catch {
+			return nil
 		}
-		
-		self.originalURL = url
-		if self.url == nil { return nil }
 	}
 	
 	public func write(to url: URL) throws {

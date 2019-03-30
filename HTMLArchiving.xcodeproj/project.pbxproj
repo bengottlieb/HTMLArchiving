@@ -688,7 +688,7 @@
 				TargetAttributes = {
 					B504E6451A8968DC001B414B = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1020;
 					};
 					B504E6661A89690C001B414B = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1043,6 +1043,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/ParseHTML/Code";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1074,6 +1075,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/ParseHTML/Code";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

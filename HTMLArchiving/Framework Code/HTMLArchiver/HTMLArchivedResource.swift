@@ -14,7 +14,7 @@ extension HTMLArchiver {
 	public static var forceHTTPS = false
 	enum ResourceType { case unknown, images, links, frames, styleSheets, videos, scripts, embed, thumbnailImage
 		var next: ResourceType? {
-			if let index = ResourceType.resourceOrder.index(of: self) , index < (ResourceType.resourceOrder.count - 1) { return ResourceType.resourceOrder[index + 1] }
+			if let index = ResourceType.resourceOrder.firstIndex(of: self) , index < (ResourceType.resourceOrder.count - 1) { return ResourceType.resourceOrder[index + 1] }
 			return nil
 		}
 		
