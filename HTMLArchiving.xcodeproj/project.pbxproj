@@ -696,7 +696,7 @@
 					};
 					B504E6AE1A898110001B414B = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1020;
 					};
 					B5088BEA21CDE14F00A1446C = {
 						CreatedOnToolsVersion = 10.1;
@@ -1127,6 +1127,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/ParseHTML/Code";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1157,6 +1158,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/ParseHTML/Code";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
