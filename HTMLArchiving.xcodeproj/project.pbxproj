@@ -23,21 +23,6 @@
 /* Begin PBXBuildFile section */
 		B5088B5C21CDC36300A1446C /* archived_response.dat in Resources */ = {isa = PBXBuildFile; fileRef = B5088B5321CDC36200A1446C /* archived_response.dat */; };
 		B5088B5D21CDC36300A1446C /* archived_response.dat in Resources */ = {isa = PBXBuildFile; fileRef = B5088B5321CDC36200A1446C /* archived_response.dat */; };
-		B5088B5E21CDC36300A1446C /* HTMLArchivedResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5421CDC36200A1446C /* HTMLArchivedResource.swift */; };
-		B5088B5F21CDC36300A1446C /* HTMLArchivedResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5421CDC36200A1446C /* HTMLArchivedResource.swift */; };
-		B5088B6021CDC36300A1446C /* HTMLArchivedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5521CDC36200A1446C /* HTMLArchivedFrame.swift */; };
-		B5088B6121CDC36300A1446C /* HTMLArchivedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5521CDC36200A1446C /* HTMLArchivedFrame.swift */; };
-		B5088B6221CDC36300A1446C /* HTMLArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5621CDC36200A1446C /* HTMLArchive.swift */; };
-		B5088B6321CDC36300A1446C /* HTMLArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5621CDC36200A1446C /* HTMLArchive.swift */; };
-		B5088B6421CDC36300A1446C /* BundledPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5721CDC36200A1446C /* BundledPageData.swift */; };
-		B5088B6521CDC36300A1446C /* BundledPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5721CDC36200A1446C /* BundledPageData.swift */; };
-		B5088B6621CDC36300A1446C /* SelfContainedUIWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5821CDC36200A1446C /* SelfContainedUIWebView.swift */; };
-		B5088B6821CDC36300A1446C /* HTMLArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5921CDC36200A1446C /* HTMLArchiver.swift */; };
-		B5088B6921CDC36300A1446C /* HTMLArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5921CDC36200A1446C /* HTMLArchiver.swift */; };
-		B5088B6A21CDC36300A1446C /* WKWebView+Tome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5A21CDC36200A1446C /* WKWebView+Tome.swift */; };
-		B5088B6B21CDC36300A1446C /* WKWebView+Tome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5A21CDC36200A1446C /* WKWebView+Tome.swift */; };
-		B5088B6C21CDC36300A1446C /* SelfContainedWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5B21CDC36200A1446C /* SelfContainedWKWebView.swift */; };
-		B5088B6D21CDC36300A1446C /* SelfContainedWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088B5B21CDC36200A1446C /* SelfContainedWKWebView.swift */; };
 		B5088B7921CDD1CB00A1446C /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B5088AC621CDC1B200A1446C /* HTMLParser.m */; };
 		B5088B7A21CDD1CB00A1446C /* NSString+HTMLEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = B5088AC721CDC1B200A1446C /* NSString+HTMLEntities.h */; };
 		B5088B7B21CDD1CB00A1446C /* HTMLSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = B5088AC821CDC1B200A1446C /* HTMLSerialization.h */; };
@@ -82,14 +67,12 @@
 		B5088BA221CDD1D200A1446C /* CSSParser.h in Headers */ = {isa = PBXBuildFile; fileRef = B5088AF021CDC1B300A1446C /* CSSParser.h */; };
 		B5088BA321CDD1D200A1446C /* CSSTokens.h in Headers */ = {isa = PBXBuildFile; fileRef = B5088AF121CDC1B300A1446C /* CSSTokens.h */; };
 		B5088BA421CDD1D200A1446C /* CSSTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5088AF221CDC1B300A1446C /* CSSTokenizer.m */; };
-		B5088BA621CDDCF200A1446C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088BA521CDDCF200A1446C /* String+Extensions.swift */; };
 		B5088BB021CDDDCE00A1446C /* Plug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BA921CDDDC700A1446C /* Plug.framework */; };
 		B5088BB121CDDDCE00A1446C /* CrossPlatformKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAA21CDDDC700A1446C /* CrossPlatformKit.framework */; };
 		B5088BB221CDDDCE00A1446C /* Gulliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAB21CDDDC700A1446C /* Gulliver.framework */; };
 		B5088BB321CDDDD300A1446C /* Plug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAD21CDDDC700A1446C /* Plug.framework */; };
 		B5088BB421CDDDD300A1446C /* CrossPlatformKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAE21CDDDC800A1446C /* CrossPlatformKit.framework */; };
 		B5088BB521CDDDD300A1446C /* Gulliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BAF21CDDDC800A1446C /* Gulliver.framework */; };
-		B5088BB621CDDE6500A1446C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5088BA521CDDCF200A1446C /* String+Extensions.swift */; };
 		B5088BB821CDDEA800A1446C /* SwearKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BB721CDDEA700A1446C /* SwearKit.framework */; };
 		B5088BBA21CDDEAD00A1446C /* SwearKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5088BB921CDDEAD00A1446C /* SwearKit.framework */; };
 		B5088BBB21CDDEC800A1446C /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B5088AC621CDC1B200A1446C /* HTMLParser.m */; };
@@ -148,6 +131,24 @@
 		B53BACD821CEE27000176B16 /* parsertest.html in Resources */ = {isa = PBXBuildFile; fileRef = B53BACD721CEE27000176B16 /* parsertest.html */; };
 		B58D64791A898F89005A0002 /* HTMLArchiving.h in Headers */ = {isa = PBXBuildFile; fileRef = B58D64681A898F81005A0002 /* HTMLArchiving.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B58D64961A899285005A0002 /* HTMLArchiving.h in Headers */ = {isa = PBXBuildFile; fileRef = B58D646B1A898F81005A0002 /* HTMLArchiving.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5A0F8C922BD43CA00CA2BCE /* HTMLArchivedResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C022BD43CA00CA2BCE /* HTMLArchivedResource.swift */; };
+		B5A0F8CA22BD43CA00CA2BCE /* HTMLArchivedResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C022BD43CA00CA2BCE /* HTMLArchivedResource.swift */; };
+		B5A0F8CB22BD43CA00CA2BCE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C122BD43CA00CA2BCE /* String+Extensions.swift */; };
+		B5A0F8CC22BD43CA00CA2BCE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C122BD43CA00CA2BCE /* String+Extensions.swift */; };
+		B5A0F8CD22BD43CA00CA2BCE /* HTMLArchivedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C222BD43CA00CA2BCE /* HTMLArchivedFrame.swift */; };
+		B5A0F8CE22BD43CA00CA2BCE /* HTMLArchivedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C222BD43CA00CA2BCE /* HTMLArchivedFrame.swift */; };
+		B5A0F8CF22BD43CA00CA2BCE /* HTMLArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C322BD43CA00CA2BCE /* HTMLArchive.swift */; };
+		B5A0F8D022BD43CA00CA2BCE /* HTMLArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C322BD43CA00CA2BCE /* HTMLArchive.swift */; };
+		B5A0F8D122BD43CA00CA2BCE /* BundledPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C422BD43CA00CA2BCE /* BundledPageData.swift */; };
+		B5A0F8D222BD43CA00CA2BCE /* BundledPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C422BD43CA00CA2BCE /* BundledPageData.swift */; };
+		B5A0F8D322BD43CA00CA2BCE /* SelfContainedUIWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C522BD43CA00CA2BCE /* SelfContainedUIWebView.swift */; };
+		B5A0F8D422BD43CA00CA2BCE /* SelfContainedUIWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C522BD43CA00CA2BCE /* SelfContainedUIWebView.swift */; };
+		B5A0F8D522BD43CA00CA2BCE /* HTMLArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C622BD43CA00CA2BCE /* HTMLArchiver.swift */; };
+		B5A0F8D622BD43CA00CA2BCE /* HTMLArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C622BD43CA00CA2BCE /* HTMLArchiver.swift */; };
+		B5A0F8D722BD43CA00CA2BCE /* WKWebView+Tome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C722BD43CA00CA2BCE /* WKWebView+Tome.swift */; };
+		B5A0F8D822BD43CA00CA2BCE /* WKWebView+Tome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C722BD43CA00CA2BCE /* WKWebView+Tome.swift */; };
+		B5A0F8D922BD43CA00CA2BCE /* SelfContainedWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C822BD43CA00CA2BCE /* SelfContainedWKWebView.swift */; };
+		B5A0F8DA22BD43CA00CA2BCE /* SelfContainedWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0F8C822BD43CA00CA2BCE /* SelfContainedWKWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,16 +255,7 @@
 		B5088AF121CDC1B300A1446C /* CSSTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSTokens.h; sourceTree = "<group>"; };
 		B5088AF221CDC1B300A1446C /* CSSTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSTokenizer.m; sourceTree = "<group>"; };
 		B5088B5321CDC36200A1446C /* archived_response.dat */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = archived_response.dat; sourceTree = "<group>"; };
-		B5088B5421CDC36200A1446C /* HTMLArchivedResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLArchivedResource.swift; sourceTree = "<group>"; };
-		B5088B5521CDC36200A1446C /* HTMLArchivedFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLArchivedFrame.swift; sourceTree = "<group>"; };
-		B5088B5621CDC36200A1446C /* HTMLArchive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLArchive.swift; sourceTree = "<group>"; };
-		B5088B5721CDC36200A1446C /* BundledPageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundledPageData.swift; sourceTree = "<group>"; };
-		B5088B5821CDC36200A1446C /* SelfContainedUIWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfContainedUIWebView.swift; sourceTree = "<group>"; };
-		B5088B5921CDC36200A1446C /* HTMLArchiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLArchiver.swift; sourceTree = "<group>"; };
-		B5088B5A21CDC36200A1446C /* WKWebView+Tome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+Tome.swift"; sourceTree = "<group>"; };
-		B5088B5B21CDC36200A1446C /* SelfContainedWKWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfContainedWKWebView.swift; sourceTree = "<group>"; };
 		B5088B7821CDD01600A1446C /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Code/module.modulemap; sourceTree = "<group>"; };
-		B5088BA521CDDCF200A1446C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		B5088BA921CDDDC700A1446C /* Plug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Plug.framework; sourceTree = "<group>"; };
 		B5088BAA21CDDDC700A1446C /* CrossPlatformKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrossPlatformKit.framework; sourceTree = "<group>"; };
 		B5088BAB21CDDDC700A1446C /* Gulliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Gulliver.framework; sourceTree = "<group>"; };
@@ -286,6 +278,16 @@
 		B58D64681A898F81005A0002 /* HTMLArchiving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMLArchiving.h; sourceTree = "<group>"; };
 		B58D646A1A898F81005A0002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B58D646B1A898F81005A0002 /* HTMLArchiving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMLArchiving.h; sourceTree = "<group>"; };
+		B5A0F8BE22BD411E00CA2BCE /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		B5A0F8C022BD43CA00CA2BCE /* HTMLArchivedResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLArchivedResource.swift; sourceTree = "<group>"; };
+		B5A0F8C122BD43CA00CA2BCE /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B5A0F8C222BD43CA00CA2BCE /* HTMLArchivedFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLArchivedFrame.swift; sourceTree = "<group>"; };
+		B5A0F8C322BD43CA00CA2BCE /* HTMLArchive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLArchive.swift; sourceTree = "<group>"; };
+		B5A0F8C422BD43CA00CA2BCE /* BundledPageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundledPageData.swift; sourceTree = "<group>"; };
+		B5A0F8C522BD43CA00CA2BCE /* SelfContainedUIWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfContainedUIWebView.swift; sourceTree = "<group>"; };
+		B5A0F8C622BD43CA00CA2BCE /* HTMLArchiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLArchiver.swift; sourceTree = "<group>"; };
+		B5A0F8C722BD43CA00CA2BCE /* WKWebView+Tome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+Tome.swift"; sourceTree = "<group>"; };
+		B5A0F8C822BD43CA00CA2BCE /* SelfContainedWKWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfContainedWKWebView.swift; sourceTree = "<group>"; };
 		B5A482581AE5DE6A001636BE /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -332,7 +334,9 @@
 		B504E60A1A89230F001B414B = {
 			isa = PBXGroup;
 			children = (
+				B5A0F8BE22BD411E00CA2BCE /* Package.swift */,
 				B504E66A1A896980001B414B /* BuildFramework.sh */,
+				B5A0F8BF22BD43CA00CA2BCE /* Source */,
 				B5088BEC21CDE14F00A1446C /* TestHarness_Mac */,
 				B53BACCC21CEDDCB00176B16 /* MacTests */,
 				B5088BA721CDDDC700A1446C /* Frameworks */,
@@ -480,15 +484,6 @@
 			isa = PBXGroup;
 			children = (
 				B5088B5321CDC36200A1446C /* archived_response.dat */,
-				B5088B5421CDC36200A1446C /* HTMLArchivedResource.swift */,
-				B5088B5521CDC36200A1446C /* HTMLArchivedFrame.swift */,
-				B5088B5621CDC36200A1446C /* HTMLArchive.swift */,
-				B5088B5721CDC36200A1446C /* BundledPageData.swift */,
-				B5088B5821CDC36200A1446C /* SelfContainedUIWebView.swift */,
-				B5088B5921CDC36200A1446C /* HTMLArchiver.swift */,
-				B5088B5A21CDC36200A1446C /* WKWebView+Tome.swift */,
-				B5088B5B21CDC36200A1446C /* SelfContainedWKWebView.swift */,
-				B5088BA521CDDCF200A1446C /* String+Extensions.swift */,
 			);
 			path = HTMLArchiver;
 			sourceTree = "<group>";
@@ -521,6 +516,30 @@
 			);
 			name = HTMLArchiving_iOS;
 			path = HTMLArchiving/iOS;
+			sourceTree = "<group>";
+		};
+		B5A0F8BF22BD43CA00CA2BCE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B5A0F8DB22BD453400CA2BCE /* HTMLArchiving */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B5A0F8DB22BD453400CA2BCE /* HTMLArchiving */ = {
+			isa = PBXGroup;
+			children = (
+				B5A0F8C022BD43CA00CA2BCE /* HTMLArchivedResource.swift */,
+				B5A0F8C122BD43CA00CA2BCE /* String+Extensions.swift */,
+				B5A0F8C222BD43CA00CA2BCE /* HTMLArchivedFrame.swift */,
+				B5A0F8C322BD43CA00CA2BCE /* HTMLArchive.swift */,
+				B5A0F8C422BD43CA00CA2BCE /* BundledPageData.swift */,
+				B5A0F8C522BD43CA00CA2BCE /* SelfContainedUIWebView.swift */,
+				B5A0F8C622BD43CA00CA2BCE /* HTMLArchiver.swift */,
+				B5A0F8C722BD43CA00CA2BCE /* WKWebView+Tome.swift */,
+				B5A0F8C822BD43CA00CA2BCE /* SelfContainedWKWebView.swift */,
+			);
+			path = HTMLArchiving;
 			sourceTree = "<group>";
 		};
 		B5A482401AE5838F001636BE /* Frameworks */ = {
@@ -796,34 +815,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5088B8121CDD1CB00A1446C /* HTMLEntities.m in Sources */,
+				B5A0F8C922BD43CA00CA2BCE /* HTMLArchivedResource.swift in Sources */,
+				B5A0F8D722BD43CA00CA2BCE /* WKWebView+Tome.swift in Sources */,
 				B5088B9421CDD1CB00A1446C /* HTMLSelector.m in Sources */,
+				B5A0F8CF22BD43CA00CA2BCE /* HTMLArchive.swift in Sources */,
 				B5088B8E21CDD1CB00A1446C /* NSString+HTMLEntities.m in Sources */,
+				B5A0F8D322BD43CA00CA2BCE /* SelfContainedUIWebView.swift in Sources */,
 				B5088B9021CDD1CB00A1446C /* HTMLEncoding.m in Sources */,
-				B5088B6621CDC36300A1446C /* SelfContainedUIWebView.swift in Sources */,
-				B5088B6C21CDC36300A1446C /* SelfContainedWKWebView.swift in Sources */,
-				B5088B6221CDC36300A1446C /* HTMLArchive.swift in Sources */,
-				B5088B6A21CDC36300A1446C /* WKWebView+Tome.swift in Sources */,
+				B5A0F8CD22BD43CA00CA2BCE /* HTMLArchivedFrame.swift in Sources */,
 				B5088BA121CDD1D200A1446C /* CSSTokens.m in Sources */,
 				B5088BA021CDD1D200A1446C /* CSSParser.m in Sources */,
 				B5088B9121CDD1CB00A1446C /* HTMLElement.m in Sources */,
 				B5088B7921CDD1CB00A1446C /* HTMLParser.m in Sources */,
 				B5088B9B21CDD1CB00A1446C /* HTMLNode.m in Sources */,
 				B5088B8921CDD1CB00A1446C /* HTMLTreeEnumerator.m in Sources */,
-				B5088B6821CDC36300A1446C /* HTMLArchiver.swift in Sources */,
+				B5A0F8D922BD43CA00CA2BCE /* SelfContainedWKWebView.swift in Sources */,
+				B5A0F8D522BD43CA00CA2BCE /* HTMLArchiver.swift in Sources */,
 				B5088B9821CDD1CB00A1446C /* HTMLPreprocessedInputStream.m in Sources */,
+				B5A0F8D122BD43CA00CA2BCE /* BundledPageData.swift in Sources */,
+				B5A0F8CB22BD43CA00CA2BCE /* String+Extensions.swift in Sources */,
 				B5088B8821CDD1CB00A1446C /* HTMLComment.m in Sources */,
 				B5088BA421CDD1D200A1446C /* CSSTokenizer.m in Sources */,
-				B5088B6421CDC36300A1446C /* BundledPageData.swift in Sources */,
 				B5088B8A21CDD1CB00A1446C /* HTMLDocumentType.m in Sources */,
 				B5088B7C21CDD1CB00A1446C /* HTMLTextNode.m in Sources */,
 				B5088B8D21CDD1CB00A1446C /* HTMLSerialization.m in Sources */,
 				B5088B9921CDD1CB00A1446C /* HTMLOrderedDictionary.m in Sources */,
-				B5088B6021CDC36300A1446C /* HTMLArchivedFrame.swift in Sources */,
-				B5088BA621CDDCF200A1446C /* String+Extensions.swift in Sources */,
 				B5088B8B21CDD1CB00A1446C /* HTMLDocument.m in Sources */,
 				B5088B9221CDD1CB00A1446C /* HTMLString.m in Sources */,
 				B5088B8521CDD1CB00A1446C /* HTMLTokenizer.m in Sources */,
-				B5088B5E21CDC36300A1446C /* HTMLArchivedResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,33 +851,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5088BC321CDDEC800A1446C /* HTMLEntities.m in Sources */,
+				B5A0F8CA22BD43CA00CA2BCE /* HTMLArchivedResource.swift in Sources */,
+				B5A0F8D822BD43CA00CA2BCE /* WKWebView+Tome.swift in Sources */,
 				B5088BD621CDDEC800A1446C /* HTMLSelector.m in Sources */,
+				B5A0F8D022BD43CA00CA2BCE /* HTMLArchive.swift in Sources */,
 				B5088BD021CDDEC800A1446C /* NSString+HTMLEntities.m in Sources */,
+				B5A0F8D422BD43CA00CA2BCE /* SelfContainedUIWebView.swift in Sources */,
 				B5088BD221CDDEC800A1446C /* HTMLEncoding.m in Sources */,
-				B5088B6D21CDC36300A1446C /* SelfContainedWKWebView.swift in Sources */,
-				B5088B6321CDC36300A1446C /* HTMLArchive.swift in Sources */,
-				B5088B6B21CDC36300A1446C /* WKWebView+Tome.swift in Sources */,
-				B5088B6921CDC36300A1446C /* HTMLArchiver.swift in Sources */,
+				B5A0F8CE22BD43CA00CA2BCE /* HTMLArchivedFrame.swift in Sources */,
 				B5088BE321CDDEC800A1446C /* CSSTokens.m in Sources */,
 				B5088BE221CDDEC800A1446C /* CSSParser.m in Sources */,
 				B5088BD321CDDEC800A1446C /* HTMLElement.m in Sources */,
 				B5088BBB21CDDEC800A1446C /* HTMLParser.m in Sources */,
 				B5088BDD21CDDEC800A1446C /* HTMLNode.m in Sources */,
 				B5088BCB21CDDEC800A1446C /* HTMLTreeEnumerator.m in Sources */,
-				B5088BB621CDDE6500A1446C /* String+Extensions.swift in Sources */,
+				B5A0F8DA22BD43CA00CA2BCE /* SelfContainedWKWebView.swift in Sources */,
+				B5A0F8D622BD43CA00CA2BCE /* HTMLArchiver.swift in Sources */,
 				B5088BDA21CDDEC800A1446C /* HTMLPreprocessedInputStream.m in Sources */,
+				B5A0F8D222BD43CA00CA2BCE /* BundledPageData.swift in Sources */,
+				B5A0F8CC22BD43CA00CA2BCE /* String+Extensions.swift in Sources */,
 				B5088BCA21CDDEC800A1446C /* HTMLComment.m in Sources */,
 				B5088BE621CDDEC800A1446C /* CSSTokenizer.m in Sources */,
-				B5088B6521CDC36300A1446C /* BundledPageData.swift in Sources */,
 				B5088BCC21CDDEC800A1446C /* HTMLDocumentType.m in Sources */,
 				B5088BBE21CDDEC800A1446C /* HTMLTextNode.m in Sources */,
 				B5088BCF21CDDEC800A1446C /* HTMLSerialization.m in Sources */,
 				B5088BDB21CDDEC800A1446C /* HTMLOrderedDictionary.m in Sources */,
-				B5088B6121CDC36300A1446C /* HTMLArchivedFrame.swift in Sources */,
 				B5088BCD21CDDEC800A1446C /* HTMLDocument.m in Sources */,
 				B5088BD421CDDEC800A1446C /* HTMLString.m in Sources */,
 				B5088BC721CDDEC800A1446C /* HTMLTokenizer.m in Sources */,
-				B5088B5F21CDC36300A1446C /* HTMLArchivedResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1167,6 +1187,7 @@
 		B5088BF721CDE15000A1446C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1196,6 +1217,7 @@
 		B5088BF821CDE15000A1446C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
