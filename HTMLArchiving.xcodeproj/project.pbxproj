@@ -371,6 +371,11 @@
 		B5088AC521CDC1B200A1446C /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				B5088AEE21CDC1B300A1446C /* CSSParser.m */,
+				B5088AEF21CDC1B300A1446C /* CSSTokens.m */,
+				B5088AF021CDC1B300A1446C /* CSSParser.h */,
+				B5088AF121CDC1B300A1446C /* CSSTokens.h */,
+				B5088AF221CDC1B300A1446C /* CSSTokenizer.m */,
 				B5088AC621CDC1B200A1446C /* HTMLParser.m */,
 				B5088AC721CDC1B200A1446C /* NSString+HTMLEntities.h */,
 				B5088AC821CDC1B200A1446C /* HTMLSerialization.h */,
@@ -412,18 +417,6 @@
 				B5088AEC21CDC1B300A1446C /* HTMLComment.h */,
 			);
 			path = Code;
-			sourceTree = "<group>";
-		};
-		B5088AED21CDC1B300A1446C /* CSS */ = {
-			isa = PBXGroup;
-			children = (
-				B5088AEE21CDC1B300A1446C /* CSSParser.m */,
-				B5088AEF21CDC1B300A1446C /* CSSTokens.m */,
-				B5088AF021CDC1B300A1446C /* CSSParser.h */,
-				B5088AF121CDC1B300A1446C /* CSSTokens.h */,
-				B5088AF221CDC1B300A1446C /* CSSTokenizer.m */,
-			);
-			path = CSS;
 			sourceTree = "<group>";
 		};
 		B5088B5221CDC36200A1446C /* Framework Code */ = {
@@ -545,7 +538,6 @@
 			isa = PBXGroup;
 			children = (
 				B5088AC521CDC1B200A1446C /* Code */,
-				B5088AED21CDC1B300A1446C /* CSS */,
 			);
 			path = ParseHTML;
 			sourceTree = "<group>";
