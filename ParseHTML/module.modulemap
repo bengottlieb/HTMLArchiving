@@ -1,4 +1,4 @@
-module HTMLArchivingPrivate {
+module ParseHTML {
 	header "HTMLParser.h"
 	header "HTMLDocument.h"
 	header "HTMLDocumentType.h"

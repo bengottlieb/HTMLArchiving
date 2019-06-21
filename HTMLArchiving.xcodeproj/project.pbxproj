@@ -255,7 +255,7 @@
 		B5088AF121CDC1B300A1446C /* CSSTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSTokens.h; sourceTree = "<group>"; };
 		B5088AF221CDC1B300A1446C /* CSSTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSTokenizer.m; sourceTree = "<group>"; };
 		B5088B5321CDC36200A1446C /* archived_response.dat */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = archived_response.dat; sourceTree = "<group>"; };
-		B5088B7821CDD01600A1446C /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Code/module.modulemap; sourceTree = "<group>"; };
+		B5088B7821CDD01600A1446C /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		B5088BA921CDDDC700A1446C /* Plug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Plug.framework; sourceTree = "<group>"; };
 		B5088BAA21CDDDC700A1446C /* CrossPlatformKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrossPlatformKit.framework; sourceTree = "<group>"; };
 		B5088BAB21CDDDC700A1446C /* Gulliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Gulliver.framework; sourceTree = "<group>"; };
@@ -364,8 +364,6 @@
 			isa = PBXGroup;
 			children = (
 				B5088B7821CDD01600A1446C /* module.modulemap */,
-				B5088AC521CDC1B200A1446C /* Code */,
-				B5088AED21CDC1B300A1446C /* CSS */,
 			);
 			path = ParseHTML;
 			sourceTree = "<group>";
@@ -521,6 +519,7 @@
 		B5A0F8BF22BD43CA00CA2BCE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B5A0F8DC22BD543D00CA2BCE /* ParseHTML */,
 				B5A0F8DB22BD453400CA2BCE /* HTMLArchiving */,
 			);
 			path = Source;
@@ -540,6 +539,15 @@
 				B5A0F8C822BD43CA00CA2BCE /* SelfContainedWKWebView.swift */,
 			);
 			path = HTMLArchiving;
+			sourceTree = "<group>";
+		};
+		B5A0F8DC22BD543D00CA2BCE /* ParseHTML */ = {
+			isa = PBXGroup;
+			children = (
+				B5088AC521CDC1B200A1446C /* Code */,
+				B5088AED21CDC1B300A1446C /* CSS */,
+			);
+			path = ParseHTML;
 			sourceTree = "<group>";
 		};
 		B5A482401AE5838F001636BE /* Frameworks */ = {
