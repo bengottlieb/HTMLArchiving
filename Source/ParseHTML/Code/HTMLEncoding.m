@@ -313,7 +313,7 @@ static const EncodingLabelMap EncodingLabels[] = {
 static int (^EncodingLabelComparator)(const void *voidKey, const void *voidItem) = ^int(const void *voidKey, const void *voidItem) {
     const NSString *key = (__bridge const NSString *)voidKey;
     const EncodingLabelMap *item = voidItem;
-    return [key caseInsensitiveCompare:item->label];
+    return (int) [key caseInsensitiveCompare:item->label];
 };
 
 static NSString * NamedEncodingForLabel(NSString *label)
@@ -379,7 +379,7 @@ static const NameCFEncodingMap StringEncodings[] = {
 static int (^NameCFEncodingComparator)(const void *voidKey, const void *voidItem) = ^int(const void *voidKey, const void *voidItem) {
     const NSString *key = (__bridge const NSString *)voidKey;
     const NameCFEncodingMap *item = voidItem;
-    return [key caseInsensitiveCompare:item->name];
+    return (int) [key caseInsensitiveCompare:item->name];
 };
 
 static NSStringEncoding StringEncodingForName(NSString *name)
