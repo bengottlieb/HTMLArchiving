@@ -8,7 +8,6 @@
 
 import WebKit
 import Plug
-//import HTMLArchivingPrivate 2
 import Gulliver
 
 public typealias HTMLArchiverProgressCallback = ((Double) -> Void)

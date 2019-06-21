@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import WebKit
 import Gulliver
+import WebKit
 
 public protocol SelfContainedWebViewDelegate: WKNavigationDelegate {
 	func webView(_ webView: WKWebView, didRedirectFrom: URL, to: URL)

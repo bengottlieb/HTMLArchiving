@@ -8,8 +8,8 @@
 
 import WebKit
 import Plug
-import Gulliver
 import ParseHTML
+import Gulliver
 import CrossPlatformKit
 
 extension HTMLArchiver {

@@ -20,7 +20,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
 		.target(
 			name: "HTMLArchiving",
-			dependencies: ["https://github.com/standalone/gulliver.git", "https://github.com/bengottlieb/plug.git", "https://github.com/bengottlieb/crossplatformkit.git"]),
+			dependencies: ["https://bengottlieb@github.com/standalone/gulliver.git", "https://github.com/bengottlieb/plug.git", "https://github.com/bengottlieb/crossplatformkit.git"]),
 		.target(
 			name: "ParseHTML",
 			dependencies: []),

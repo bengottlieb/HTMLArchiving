@@ -8,7 +8,8 @@
 
 import WebKit
 import Plug
-import Gulliver
+
+infix operator ≈≈ : ComparisonPrecedence
 
 extension HTMLArchiver {
 	public static var forceHTTPS = false
@@ -134,6 +135,12 @@ extension HTMLArchiver {
 			if url.scheme == "data" { return nil }
 		}
 		
+		func log(_ error: Error?, _ comment: String) {
+			guard let err = error else { return }
+			
+			print("\(comment)\n\(err)")
+		}
+		
 		func start() {
 			let url = HTMLArchiver.forceHTTPS ? self.url.secureURL : self.url
 
@@ -147,7 +154,7 @@ extension HTMLArchiver {
 			request.allHTTPHeaderFields = headers
 			
 			let task = Resource.session.downloadTask(with: request, completionHandler: { location, response, error in
-				ErrorLogger.log(error, "Problem loading resource: \(url)")
+				self.log(error, "Problem loading resource: \(url)")
 				
 				if let resp = response as? HTTPURLResponse, resp.statusCode / 100 < 4 {
 					self.failed = !self.saveDownload(at: location)
@@ -174,7 +181,7 @@ extension HTMLArchiver {
 				try FileManager.default.copyItem(at: url, to: newURL)
 				self.storageURL = newURL
 			} catch let error {
-				ErrorLogger.log(error, "Error copying downloaded file")
+				self.log(error, "Error copying downloaded file")
 				return false
 			}
 			return true
@@ -211,7 +218,7 @@ extension HTMLArchiver {
 				let hrefExtractor = try NSRegularExpression(pattern: "href=\"([^\"]+)", options: [ .caseInsensitive ])
 				let relExtractor = try NSRegularExpression(pattern: "rel=\"([^\"]+)", options: [ .caseInsensitive ])
 				
-				let range = NSRange(location: 0, length: source.length)
+				let range = NSRange(location: 0, length: source.count)
 				let matches = regex.matches(in: source, options: [.reportCompletion], range: range)
 				for match in matches {
 					let src = source as NSString
@@ -311,7 +318,7 @@ extension HTTPURLResponse {
 				response[header] = value
 			}
 			
-			response.url ?= self.url?.absoluteString
+			if let url = self.url?.absoluteString { response.url = url }
 	//		print("\(response.objects)")
 			return response.data
 		} catch {
@@ -344,9 +351,9 @@ extension HTTPURLResponse {
 			}
 			for key in keys {
 				guard let value = root[key] else { continue }
-				if value is NSNumber || key.length < 4 {
+				if value is NSNumber || key.count < 4 {
 					values.append(value)
-				} else if key.length > 4 {
+				} else if key.count > 4 {
 					newRoot[key] = value
 				} else {
 					newRoot["__nsurlrequest_proto_prop_obj_\(propCount)"] = value

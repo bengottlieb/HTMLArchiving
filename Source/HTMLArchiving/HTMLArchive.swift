@@ -8,7 +8,6 @@
 
 import Foundation
 import CrossPlatformKit
-import Gulliver
 
 public struct HTMLArchive: Equatable {
 	public var url: URL!
@@ -27,8 +26,12 @@ public struct HTMLArchive: Equatable {
 	
 	public static let mimeType = "application/x-webarchive"
 	
-	public init?(file: FilePath?) {
-		self.init(data: file?.data ?? Data())
+	public init?(file: URL?) {
+		guard let url = file else {
+			self.init(data: Data())
+			return nil
+		}
+		self.init(data: (try? Data(contentsOf: url)) ?? Data())
 	}
 	
 	public init(url: URL, data: Data, meta: [String: String]? = nil, image: UXImage? = nil, text: String? = nil, title: String = NSLocalizedString("Untitled", comment: "Untitled"), thumbnailImage: UXImage? = nil) {
