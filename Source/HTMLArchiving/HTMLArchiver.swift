@@ -114,7 +114,8 @@ open class HTMLArchiver {
 		do {
 			try FileManager.default.createDirectory(at: self.tempDirectory, withIntermediateDirectories: true, attributes: nil)
 		} catch let error {
-			ErrorLogger.log(error, "Failed to set up temporary directory for archiving")
+			print("Failed to set up temporary directory for archiving: \(error)")
+			//ErrorLogger.log(error, "Failed to set up temporary directory for archiving")
 		}
 		return true
 	}

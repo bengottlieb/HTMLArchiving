@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CrossPlatformKit",
+        "repositoryURL": "https://github.com/bengottlieb/CrossPlatformKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "89decc5b139eed1126677ccb30d7f936351a7de5",
+          "version": null
+        }
+      },
+      {
+        "package": "Gulliver",
+        "repositoryURL": "https://bengottlieb@github.com/standalone/Gulliver.git",
+        "state": {
+          "branch": null,
+          "revision": "f59a2eb9789246e407e0b9a1310fd5d2c8004c94",
+          "version": "1.0.3"
+        }
+      },
+      {
+        "package": "Plug",
+        "repositoryURL": "http://github.com/bengottlieb/plug.git",
+        "state": {
+          "branch": "master",
+          "revision": "b6af31a11c516000182af73a8333306c1d4b65ba",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
