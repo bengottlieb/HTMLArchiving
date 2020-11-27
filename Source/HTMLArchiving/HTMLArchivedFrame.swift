@@ -9,7 +9,7 @@
 import WebKit
 import Plug
 import ParseHTML
-import Gulliver
+import Studio
 import CrossPlatformKit
 
 extension HTMLArchiver {

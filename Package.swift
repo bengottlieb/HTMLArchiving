@@ -30,6 +30,8 @@ let package = Package(
 			dependencies: ["ParseHTML", "Plug", "CrossPlatformKit", "Studio"]),
 		.target(
 			name: "ParseHTML",
-			dependencies: []),
+            dependencies: [],
+            publicHeadersPath: "Include"
+            ),
     ]
 )

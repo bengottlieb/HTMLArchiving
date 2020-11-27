@@ -12,7 +12,7 @@ extension String {
 	var urlFragment: String? {
 		if self.hasPrefix("url("), self.hasSuffix(")") {
 			let first = self.index(4)
-			let last = self.index(self.length - 1)
+			let last = self.index(self.count - 1)
 			
 			let frag = self[first..<last]
 			return String(frag)

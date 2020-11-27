@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Gulliver
+import Studio
 import WebKit
 
 public protocol SelfContainedWebViewDelegate: WKNavigationDelegate {

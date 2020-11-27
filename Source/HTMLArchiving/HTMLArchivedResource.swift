@@ -325,8 +325,7 @@ extension HTTPURLResponse {
 			
 		}
 
-		let data = NSMutableData()
-		let archiver = NSKeyedArchiver(forWritingWith: data)
+		let archiver = NSKeyedArchiver(requiringSecureCoding: false)
 		//					var headers = response.allHeaderFields as? [String: String] ?? [:]
 		//					headers["Access-Control-Allow-Origin"] = "*"
 		//					if let url = response.url, headers["Access-Control-Allow-Origin"] == nil {

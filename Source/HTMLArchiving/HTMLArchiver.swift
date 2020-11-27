@@ -7,8 +7,7 @@
 //
 
 import WebKit
-import Plug
-import Gulliver
+import Studio
 
 public typealias HTMLArchiverProgressCallback = ((Double) -> Void)
 public typealias ArchiveCompletionClosure = ((HTMLArchive?, Error?) -> Void)
@@ -25,50 +24,46 @@ open class HTMLArchiver {
 	var text: String?
 	var tempDirectory: URL!
 	var progressCallback: HTMLArchiverProgressCallback?
+	var session = URLSession.shared
+	var isPrivate = false
 
 	var cookies: [HTTPCookie] = []
 	var mainFrame: WebFrame?
 	var archiveResults: HTMLArchive?
-	lazy var startDocket: Docket = {
-		let docket = Docket("webviewArchiveProgress-\(self)") {
-			self.state = .idle
-			self.beginArchive()
-		}
-		docket.increment(tag: "begin")
-		return docket
-	}()
+    let dispatchGroup = DispatchGroup()
 
 	var resourceURLs: [ResourceType: [String]] = [:]
 	let fetchHTMLFromWebView = false		// some sites seem to be having problems if we fetch the webview-preprocessed HTML. We should grab directly from the site when possible
 	
-	public init?(webView: WKWebView, url: URL? = nil, progressCallback: HTMLArchiverProgressCallback? = nil) {
+	public init?(webView: WKWebView, url: URL? = nil, private isPrivate: Bool = false, progressCallback: HTMLArchiverProgressCallback? = nil) {
 		var targetURL = webView.url ?? URL.blank
 		if targetURL == URL.blank { targetURL = url ?? URL.blank }
 		self.url = targetURL
 		self.progressCallback = progressCallback
+		self.isPrivate = isPrivate
 		
 		if webView.url == nil { return nil }
 		if !self.setupTempDirectory() { return nil }
 
 		if self.fetchHTMLFromWebView {
 			self.state = .waitingForHTML
-			self.startDocket.increment(tag: "html")
+			self.dispatchGroup.enter()
 			webView.fetchHTML { html in
 				self.html = html
-				self.startDocket.decrement(tag: "html")
+                self.dispatchGroup.leave()
 			}
 		} else {
 			if #available(OSXApplicationExtension 10.13, iOS 11, *) {
 				self.state = .waitingForCookies
-				self.startDocket.increment(tag: "cookies")
+                self.dispatchGroup.enter()
 				WKWebsiteDataStore.default().httpCookieStore.getAllCookies { cookies in
 					self.cookies = cookies
-					self.startDocket.decrement(tag: "cookies")
+                    self.dispatchGroup.leave()
 				}
 			}
 		}
 		
-		self.startDocket.increment(tag: "stylesheets")
+        self.dispatchGroup.enter()
 	//	self.startDocket.increment(tag: "touchIcon")
 
 		webView.evaluateJavaScript("document.body.innerText") { text, error in
@@ -81,10 +76,12 @@ open class HTMLArchiver {
 			if let urls = results as? [String] {
 				self.resourceURLs[.styleSheets] = urls
 			}
-			self.startDocket.decrement(tag: "stylesheets")
+            self.dispatchGroup.leave()
 		}
 		
-		
+        self.dispatchGroup.notify(queue: .main) {
+            self.beginArchive()
+        }
 		
 //		webView.evaluateJavaScript(WKWebView.findFavIconScript) { results, error in
 //			if let raw = results as? String, let url = raw.url(basedOn: self.url), let mainFrame = self.mainFrame {
@@ -102,19 +99,19 @@ open class HTMLArchiver {
 		self.bundle = info
 	}
 	
-	public init?(url: URL, html: String? = nil, progressCallback: HTMLArchiverProgressCallback? = nil) {
+	public init?(url: URL, html: String? = nil, private isPrivate: Bool = false, progressCallback: HTMLArchiverProgressCallback? = nil) {
 		self.html = html
+		self.isPrivate = isPrivate
 		self.url = url
 		self.progressCallback = progressCallback
 		if !self.setupTempDirectory() { return nil }
 	}
 	
 	func setupTempDirectory() -> Bool {
-		self.tempDirectory = FileManager.tempDirectoryURL.appendingPathComponent("archiver-scratch-\(UUID().uuidString)")
+		self.tempDirectory = FileManager.tempDirectory.appendingPathComponent("archiver-scratch-\(UUID().uuidString)")
 		do {
 			try FileManager.default.createDirectory(at: self.tempDirectory, withIntermediateDirectories: true, attributes: nil)
-		} catch let error {
-			print("Failed to set up temporary directory for archiving: \(error)")
+		} catch {
 			//ErrorLogger.log(error, "Failed to set up temporary directory for archiving")
 		}
 		return true
@@ -141,34 +138,35 @@ open class HTMLArchiver {
 		}
 
 		self.archiveCompleteBlocks.append(completion)
-		self.startDocket.decrement(tag: "begin")
+        self.dispatchGroup.leave()
 	}
 	
 	func beginArchive() {
 		if self.html == nil {	//|| self.data == nil {
 			self.state = .loadingHTML
-			guard let connection = Connection(method: .GET, url: self.url) else {
-				self.fail(with: ArchiveError.failedToGetHTML)
-				
-				return
-			}
-			connection.addHeader(header: Plug.Header.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38"))
-			connection.addHeader(header: Plug.Header.accept(["*/*"]))
-			connection.addHeader(header: Plug.Header.acceptEncoding("gzip;q=1.0,compress;q=0.5"))
+			let userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38"
+			
+			var request = URLRequest(url: self.url)
+			
+			request.addValue(userAgent, forHTTPHeaderField: "User-Agent")
+			request.addValue("*/*", forHTTPHeaderField: "Accept")
+			request.addValue("gzip;q=1.0,compress;q=0.5", forHTTPHeaderField: "Accept-Encoding")
+			request.httpShouldHandleCookies = !self.isPrivate
 
-			//connection.setCookies(self.cookies)
-			connection.completion { conn, data in
-				self.data = data.data
-				if let html = data.data.string {
+			let task = self.session.dataTask(with: request) { data, response, error in
+				if let err = error {
+					self.fail(with: err)
+					return
+				}
+				self.data = data
+                if let d = data, let html = String(data: d, encoding: .utf8) {
 					self.html = html
 					self.startParse()
 				} else {
-					self.fail(with: conn.resultsError ?? ArchiveError.failedToGetHTML)
+					self.fail(with: ArchiveError.failedToGetHTML)
 				}
-			}.error { conn, error in
-				self.fail(with: error)
 			}
-			
+			task.resume()
 		} else {
 			self.startParse()
 		}
