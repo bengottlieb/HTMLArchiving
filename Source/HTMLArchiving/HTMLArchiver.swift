@@ -105,6 +105,10 @@ open class HTMLArchiver {
 		self.url = url
 		self.progressCallback = progressCallback
 		if !self.setupTempDirectory() { return nil }
+        self.dispatchGroup.enter()
+        self.dispatchGroup.notify(queue: .main) {
+            self.beginArchive()
+        }
 	}
 	
 	func setupTempDirectory() -> Bool {
